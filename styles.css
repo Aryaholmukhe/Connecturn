@@ -1,4 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@400;600;800&family=Inter:wght@400;700&display=swap');
+
+body{
+    overflow-x:hidden;
+    padding: 10%
+}
+
+#circle{
+    position: absolute;
+    width: 140%;
+    height: 140%;
+    transform: translate(-30%, -50%);
+    background-color: #00171F   ;
+    border-radius: 100%;
+    z-index: -1;
+}
 #particles-js{
     background-color: fff;
-    height: 400px;
+    height: 100vh;
+    position: absolute;
+    z-index: -99;
+}
+#title{
+    color: #00A7E1;
+    font-size: 7vw;
+    padding: 0;
+    margin: 0;
+}
+.header{
+    z-index: 1;
+    font-family: 'Anybody', cursive;
+font-family: 'Inter', sans-serif;
+color: #fff;
+}
+#sub-title{
+font-size: 180% ;
+line-height: 50px;
+padding: 5%;
 }

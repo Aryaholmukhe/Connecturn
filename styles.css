@@ -1,8 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Anybody:wght@400;600;800&family=Inter:wght@400;700&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+canvas{
+    width: 100vw;
+    height: 100vh;
+}
+.ball-text{
+    display:none;
+}
 body{
-    overflow-x:hidden;
-    padding: 10%
+    /* overflow-x:hidden; */
+    /* padding: 10% */
 }
 
 #circle{

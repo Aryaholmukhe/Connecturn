@@ -32,12 +32,12 @@
         }
       },
       "size": {
-        "value": 10,
+        "value": 5,
         "random": true
       },
       "line_linked": {
         "enable": true,
-        "distance":100,
+        "distance": 150,
         "color": "#EE4266",
         "opacity": 0.4,
         "width": 2

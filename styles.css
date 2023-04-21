@@ -14,8 +14,7 @@ canvas{
     display:none;
 }
 body{
-    /* overflow-x:hidden; */
-    /* padding: 10% */
+    overflow-x:hidden;  
 }
 
 #circle{

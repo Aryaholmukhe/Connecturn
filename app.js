@@ -13,7 +13,7 @@ let ball = { frame: 0 };
 for (let i = 0; i < frameCount; i++) {
   const img = new Image();
   img.src = currentFrame(i);
-  console.log(currentFrame(i));
+  // console.log(currentFrame(i));
   images.push(img);
 }
 
@@ -22,15 +22,29 @@ gsap.to(ball, {
   snap: "frame",
   ease: "none",
   scrollTrigger: {
-    scrub: 0.5,
+    scrub: 0.01,
     pin: "canvas",
     end: "500%",
   },
   onUpdate: render,
 });
 
+// USE gsap.timeline() 
+
 gsap.fromTo(
-  ".ball-text",
+  ".Connect",
+  {opacity: 1,},
+  {
+    opacity: 0,
+    scrollTrigger: {
+      scrub: 1,
+      start: "0%",
+      end: "10%",
+    }
+  }
+)
+gsap.fromTo(
+  ".and",
   {
     opacity: 0,
   },
@@ -38,15 +52,69 @@ gsap.fromTo(
     opacity: 1,
     scrollTrigger: {
       scrub: 1,
-
-      start: "50%",
-      end: "60%",
+      start: "5%",
+      end: "15%",
     },
     onComplete: () => {
-      gsap.to(".ball-text", { opacity: 0 });
+      gsap.fromTo(".and", { opacity: 0 });
     },
   }
 );
+
+// gsap.fromTo(
+//   ".Make",
+//   {
+//     opacity: 0,
+//   },
+//   {
+//     opacity: 1,
+//     scrollTrigger: {
+//       scrub: 1,
+
+//       start: "15%",
+//       end: "25%",
+//     },
+//     onComplete: () => {
+//       gsap.to(".and", { opacity: 0 });
+//     },
+//   }
+// );
+// gsap.fromTo(
+//   ".the",
+//   {
+//     opacity: 0,
+//   },
+//   {
+//     opacity: 1,
+//     scrollTrigger: {
+//       scrub: 1,
+
+//       start: "15%",
+//       end: "30%",
+//     },
+//     onComplete: () => {
+//       gsap.to(".and", { opacity: 0 });
+//     },
+//   }
+// );
+// gsap.fromTo(
+//   ".Correct",
+//   {
+//     opacity: 0,
+//   },
+//   {
+//     opacity: 1,
+//     scrollTrigger: {
+//       scrub: 1,
+
+//       start: "25%",
+//       end: "35%",
+//     },
+//     onComplete: () => {
+//       gsap.to(".and", { opacity: 0 });
+//     },
+//   }
+// );
 
 images[0].onload = render;
 

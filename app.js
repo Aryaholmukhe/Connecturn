@@ -29,92 +29,32 @@ gsap.to(ball, {
   onUpdate: render,
 });
 
-// USE gsap.timeline() 
 
-gsap.fromTo(
-  ".Connect",
-  {opacity: 1,},
-  {
-    opacity: 0,
-    scrollTrigger: {
-      scrub: 1,
-      start: "0%",
-      end: "10%",
-    }
+let tl = gsap.timeline({
+  scrollTrigger: {
+    start: "top",
+    end: "+=300%",
+    scrub: 1
   }
-)
-gsap.fromTo(
-  ".and",
-  {
-    opacity: 0,
-  },
-  {
-    opacity: 1,
-    scrollTrigger: {
-      scrub: 1,
-      start: "5%",
-      end: "15%",
-    },
-    onComplete: () => {
-      gsap.fromTo(".and", { opacity: 0 });
-    },
-  }
-);
+});
 
-// gsap.fromTo(
-//   ".Make",
-//   {
-//     opacity: 0,
-//   },
-//   {
-//     opacity: 1,
-//     scrollTrigger: {
-//       scrub: 1,
+const texts = gsap.utils.toArray(".title");
+texts.forEach((text, index) => {
+  tl.from(text, {  autoAlpha: 0, duration: 1 }).to(
+    text,
+    { autoAlpha: 0, duration: 1 },
+    ">+=1"
+  );
+});
 
-//       start: "15%",
-//       end: "25%",
-//     },
-//     onComplete: () => {
-//       gsap.to(".and", { opacity: 0 });
-//     },
-//   }
-// );
-// gsap.fromTo(
-//   ".the",
-//   {
-//     opacity: 0,
-//   },
-//   {
-//     opacity: 1,
-//     scrollTrigger: {
-//       scrub: 1,
+canvas.onloadedmetadata = function () {
+  tl.to(
+    canvas,
+    { currentTime: canvas.duration, duration: () => tl.duration() },
+    0
+  );
+};
 
-//       start: "15%",
-//       end: "30%",
-//     },
-//     onComplete: () => {
-//       gsap.to(".and", { opacity: 0 });
-//     },
-//   }
-// );
-// gsap.fromTo(
-//   ".Correct",
-//   {
-//     opacity: 0,
-//   },
-//   {
-//     opacity: 1,
-//     scrollTrigger: {
-//       scrub: 1,
-
-//       start: "25%",
-//       end: "35%",
-//     },
-//     onComplete: () => {
-//       gsap.to(".and", { opacity: 0 });
-//     },
-//   }
-// );
 
 images[0].onload = render;
 

@@ -9,6 +9,7 @@
 canvas{
     width: 100dvw;
     height: 100dvh;
+    object-fit: cover;
 }
 .ball-text {
     position: fixed;
@@ -20,19 +21,23 @@ canvas{
     transform: translate(-20%, -40%);
   }
   .title{
-    color: #00A7E1;
-    font-size: 10vw;
-    position: fixed;
-    z-index: 2;
-    position: fixed;
-    z-index: 2;
-    top: 50%;
-    text-align: center;
-    width: 100svw;
-    transform: translate(0, -50%);
+         color: #00A7E1;
+        font-size: 10vw;
+        position: fixed;
+        width: 100svw;
+        position: fixed;
+        text-align: center;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
 }
-.Connect{
-    top: 50%;
+
+.ball-animation{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
 }
 
 body{

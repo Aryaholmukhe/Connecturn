@@ -1,7 +1,7 @@
 {
     "particles": {
       "number": {
-        "value": 100
+        "value": 60
       },
       "color": {
         "value": "#C97B84"
@@ -37,14 +37,14 @@
       },
       "line_linked": {
         "enable": true,
-        "distance": 150,
+        "distance": 250,
         "color": "#EE4266",
-        "opacity": 0.4,
+        "opacity": 0.3,
         "width": 2
       },
       "move": {
         "enable": true,
-        "speed": 3,
+        "speed": 2,
         "direction": "none",
         "random": false,
         "straight": false,

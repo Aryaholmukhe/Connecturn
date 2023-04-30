@@ -37,12 +37,11 @@ let tl = gsap.timeline({
     scrub: 1
   }
 });
-
 const texts = gsap.utils.toArray(".title");
 texts.forEach((text, index) => {
-  tl.from(text, {  autoAlpha: 0, duration: 1 }).to(
+  tl.from(text, {  autoAlpha: 0, duration: 2 }).to(
     text,
-    { autoAlpha: 0, duration: 1 },
+    { autoAlpha: 0, duration: 2 },
     ">+=1"
   );
 });
@@ -55,6 +54,32 @@ canvas.onloadedmetadata = function () {
   );
 };
 
+gsap.fromTo(
+  ".Connect",
+  {opacity: 1,},
+  {
+    opacity: 0,
+    scrollTrigger: {
+      scrub: 1,
+      start: "0%",
+      end: "10%",
+    }
+  }
+)
+
+gsap.from(
+  ".banner-demo", {
+    scrollTrigger:{
+      start: "top bottom",
+      end: "bottom center",
+      scrub: true,
+      trigger: ".banner-demo",
+      // markers: true
+    },
+    xPercent:-100,
+    duration: 2
+  }
+)
 
 images[0].onload = render;
 

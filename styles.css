@@ -184,6 +184,13 @@ a{
     text-align: center;
     padding: 2%;
 }
+
+.split-parent {
+    overflow: hidden;
+  }
+  .split-child {
+    display: inline-block;
+  }
 @media only screen and (max-width: 800px) {
     .banner h1 {
         font-size: 100%;

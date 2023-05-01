@@ -90,7 +90,7 @@ gsap.from(charSplit.chars, {
   scrollTrigger: "p",
   yPercent: -500,
   opacity: 0,
-  stagger: 0.01,
+  stagger: 0.009,
   duration: 1
 })
 gsap.from("hr", {
@@ -114,6 +114,28 @@ gsap.to(".pin", {
   },
   opacity: 1,
   y: 200,
+});
+
+
+gsap.from(".f", {
+  scrollTrigger: ".f",
+  opacity: 0,
+  stagger: 0.5,
+  duration: 1
+})
+
+gsap.from(".info", {
+  scrollTrigger: {
+    trigger: ".info",
+    start: "top 80%",
+    end: "bottom 40%",
+    scrub: true,
+  },
+  xPercent: -20,
+  yPercent: 20,
+  opacity: 0,
+  stagger: 0.5,
+  duration: 1
 });
 
 images[0].onload = render;

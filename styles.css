@@ -33,7 +33,7 @@ canvas {
 .Connect {
     font-family: 'Bruno Ace SC', cursive;
     color: #00A7E1;
-    font-size: 15vw;
+    font-size: 13vw;
     position: fixed;
     width: 100svw;
     position: fixed;
@@ -43,7 +43,11 @@ canvas {
     z-index: 2;
     transform: translate(-50%, -50%);
 }
+.Connecturn{
+    color: white;
+    font-family: 'Kanit', sans-serif;
 
+}
 .ball-animation {
     display: flex;
     flex-wrap: wrap;
@@ -159,6 +163,7 @@ a{
    text-decoration: none;
    color: white;
    font-weight: 700;
+   pointer-events: all;
 }
 .button:hover{
     background-color:#000000;

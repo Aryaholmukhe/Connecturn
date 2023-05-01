@@ -34,7 +34,7 @@ gsap.to(ball, {
 let tl = gsap.timeline({
   scrollTrigger: {
     start: "top",
-    end: "+=300%",
+    end: "+=500%",
     scrub: 1
   }
 });
@@ -87,11 +87,16 @@ let charSplit = new SplitType("#statistics p", {
 
 
 gsap.from(charSplit.chars, {
-  scrollTrigger: "p",
+  scrollTrigger: {
+    trigger: "p",
+    start: "top 50%",
+    end: "bottom 30%",
+      scrub: true
+  },
   yPercent: -500,
   opacity: 0,
   stagger: 0.009,
-  duration: 1
+  scrub: true
 })
 gsap.from("hr", {
   scrollTrigger:{
@@ -118,7 +123,10 @@ gsap.to(".pin", {
 
 
 gsap.from(".f", {
-  scrollTrigger: ".f",
+  scrollTrigger: {
+    trigger:".f",
+start: "top center"
+  },
   opacity: 0,
   stagger: 0.5,
   duration: 1
@@ -128,8 +136,7 @@ gsap.from(".info", {
   scrollTrigger: {
     trigger: ".info",
     start: "top 80%",
-    end: "bottom 40%",
-    scrub: true,
+    end: "bottom 40%"
   },
   xPercent: -20,
   yPercent: 20,

@@ -6,43 +6,107 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Connectern</title>
+    <title>ConnecTurn</title>
 </head>
 
 <body>
+
     <h1 class="Connect ">Connect</h1>
     <h1 class="title">Connect</h1>
     <h1 class="and title">and</h1>
     <h1 class="Make title">Make</h1>
     <h1 class="the title">the</h1>
     <h1 class="title Correct">Correct</h1>
-    <h1 class="title Turn">Turn</h1> 
+    <h1 class="title Turn">Turn</h1>
     <canvas width="700px" height="400px" class="canvas"></canvas>
 
-    <div class="banner">   
-        <div class="banner-demo">
-        </div>               
-    <h1>Bridging the networking gap...</h1>
-</div>
-<div class="statistics">
-    <div class="left">According to LinkedIn, connections account for 85% of all job searches. 🤯 WHAT?!</div>
-    <div class="right">Referred individuals have a 15 times better probability of being hired.  😱</div>
-    <div class="left">Additionally, studies have revealed that this contributes to patterns of inequality in the workplace. ‍😰</div>
-</div>
+    <div class="banner">
+        <div class="banner-demo"></div>
+        <h1>Bridging the networking gap...</h1>
+    </div>
+
+    <div id="statistics">
+        <p><span class="emoji">🤯</span> According to LinkedIn, connections account for 85% of all job searches.
+            <span class="emoji"> WHAT?!</span>
+        </p>
+        <p class="right">Referred individuals have a 15 times better probability of being hired.
+            <span class="emoji">😱</span>
+        </p>
+        <p><span class="emoji">😰</span> Additionally, studies have revealed that this contributes to patterns of
+            inequality in the workplace. ‍</p>
+    </div>
+
     <div id="particles-js"></div>
+    <div class="pin">
+        <hr style=" height:5px;
+        background-color: #fff;
+        border: none;">
+        <h1 style=" text-align: center;
+            padding: 8% 3%;
+            font-size: 4rem;">Our Solution?</h1>
+        <div class="container">
+            <div class="f">
+                <h1>WE CONNECT</h1>
+                <p>Innovative life time opportunities from business-student connections.</p>
+            </div>
+
+            <div class="f">
+                <h1>WE LEARN</h1>
+                <p>Learn to build the future together. Win-win situation for everybody.</p>
+            </div>
+
+        </div>
+
+        <div class="join-info">
+            <div>
+                <ul>Student:</ul>
+
+                <li>Job opportunities + internships</li>
+                <li>Get networks and mentorship of industry-specific professionals</li>
+                <li>Explore careers or build fundamentals in the desired field</li>
+                <li>Learn from line-minded students & business entities</li>
+                <li>Gain valuable expertise + skills</li>
+                <div class="button">
+                    <a href="https://discord.gg/jbNQ9Qah9s">Join the Hype</a>
+                </div>
+            </div>
+            <div>
+                <ul>Business:</ul>
+                <li> Connect to a younger audience who CARES about your business </li>
+                <li> Meet and inspire highly-motivated students</li>
+                <li> Receive innovative ideas/feedback from Gen Z and commence long-term growth</li>
+                <li> Hire part-time enthusiastic students who WANT to work with you</li>
+                <li> Identify & attract next generation talent and potential customers</li>
+                <div class="button">
+                    <a href="https://google.com">Get Started</a>
+                </div>
+            </div>
+        </div>
+        <div class=”footer”>
+            <div class="socials">
+                <a href="">Github</a>
+                <a href="">Instagram</a>
+                <a href="">LinkedIn</a>
+            </div>
+            <div class="credits">
+                Made with ❤️ by Arya & Grace
+            </div>
+        </div>
+    </div>
 
 
     <script src="particles.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
         particlesJS.load('particles-js', 'particles.json', function () {
             console.log('callback - particles.js config loaded');
         });
     </script>
-    
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
     <script src="./app.js"></script>
 
 </body>

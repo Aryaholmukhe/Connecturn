@@ -1,3 +1,4 @@
+
 const canvas = document.querySelector(".canvas");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -70,16 +71,50 @@ gsap.fromTo(
 gsap.from(
   ".banner-demo", {
     scrollTrigger:{
-      start: "top bottom",
-      end: "bottom center",
+      start: "top 70%",
+      end: "bottom 30%",
       scrub: true,
       trigger: ".banner-demo",
-      // markers: true
     },
     xPercent:-100,
     duration: 2
   }
 )
+let charSplit = new SplitType("#statistics p", {
+  type: "chars",
+  linesClass: "split-child"
+});
+
+
+gsap.from(charSplit.chars, {
+  scrollTrigger: "p",
+  yPercent: -500,
+  opacity: 0,
+  stagger: 0.01,
+  duration: 1
+})
+gsap.from("hr", {
+  scrollTrigger:{
+    start: "top 80%",
+    end: "bottom 20%",
+    scrub: true,
+    trigger: "hr",
+    // markers: true
+  },
+  xPercent:-100
+})
+
+gsap.to(".pin", {
+  scrollTrigger: {
+    trigger: ".pin",
+    start: "top top",
+    end: "bottom bottom",
+    pin: "#particles-js",
+    scrub: true,
+  },
+  opacity: 1,
+  y: 200,
+});
 
 images[0].onload = render;
 

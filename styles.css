@@ -1,127 +1,205 @@
-  @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Kanit:wght@700;900&family=Titillium+Web:wght@400;600&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Kanit:wght@200;300;400;700;900&display=swap');
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Titillium Web', sans-serif;
 }
 
-canvas{
+body {
+    background-color: #05060b;
+    overflow-x: hidden;
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    pointer-events: none;
+}
+
+/* Big containers */
+canvas {
     width: 100dvw;
     height: 100dvh;
     object-fit: cover;
 }
-body{
-    
-    background-color: #05060b
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -99;
+    pointer-events: all;
 }
 
-.ball-text {
-    position: fixed;
-    z-index: 2;
-    color: white;
-    font-size: 5rem;
-    right: 20%;
-    bottom: 40%;
-    transform: translate(-20%, -40%);
-  }
-  .title, .Connect{
+/* Landing Animation */
+.title,
+.Connect {
     font-family: 'Bruno Ace SC', cursive;
-         color: #00A7E1;
-        font-size: 10vw;
-        position: fixed;
-        width: 100svw;
-        position: fixed;
-        text-align: center;
-  left: 50%;
-  top: 50%;
-  z-index: 2;
-  transform: translate(-50%, -50%);
+    color: #00A7E1;
+    font-size: 15vw;
+    position: fixed;
+    width: 100svw;
+    position: fixed;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
 }
 
-.ball-animation{
+.ball-animation {
     display: flex;
     flex-wrap: wrap;
     font-size: 30px;
     text-align: center;
 }
 
-body{
-    overflow-x:hidden;  
-}
-
-.banner{
+/* Banner */
+.banner {
     background-color: #000000;
     height: 10svh;
     width: 100svw;
-  position: relative;
-  font-family: 'Bruno Ace SC', cursive;
+    position: relative;
 }
-.banner h1{     
+
+.banner h1 {
+    font-family: 'Bruno Ace SC', cursive;
     position: absolute;
-  width: 100svw;
-  font-size: 200%;
-  text-align: center;
-  top: 50%;
+    width: 100svw;
+    font-size: 5em;
+    text-align: center;
+    top: 50%;
 }
-.banner-demo{
+
+.banner-demo {
     background-color: #DC5285;
     width: 100%;
     height: 100%;
     padding: 5%;
     position: absolute;
 }
-#particles-js{
-    background-color: fff;
-    height: 100vh;
+
+/* Statistics */
+#statistics {
+    padding: 15% 10%;
+    display: block;
+    z-index: 99;
+    color: #d4babe;
+    font-size: 2em;
+}
+
+#statistics p {
+    padding: 4% 0;
+    font-family: 'kanit', sans-serif;
+    font-weight: 400;
+}
+
+.right {
+    text-align: right;
+}
+
+.emoji {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* Glass */
+
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-around;
+    /* width: 100svw;
+    font-size: 200%; */
+}
+
+.f h1 {
+    font-weight: black;
+    padding-bottom: 5%;
+}
+
+.f {
+    text-align: center;
+    flex: 0 1 30%;
+    background: rgba(0, 167, 225, 0.05);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 5px;
+    border: 3px solid rgba(107, 187, 215, 0.26);
+    margin: 1% 5%;
+    padding: 3%;
+
+}
+
+/* joining info */
+.join-info{
+    margin: auto;
+    width: 80%;
+    padding: 10%;
+    font-weight: 300;
+    font-size: 2rem;
+}
+ul{
+    font-size: 3rem;
+    font-weight: 400;
+    padding: 3%;
+}
+.button{
+    background-color: #5865F2;
+   padding: 1%;
+   margin: 3% 10%;
+   width: 40%;
+   border: 2px solid white;
+   border-radius: 5px;
+   text-align: center;
+   z-index: 99;
+   pointer-events: all;
+
+}
+a{
+   text-decoration: none;
+   color: white;
+   font-weight: 700;
+}
+.button:hover{
+    background-color:#000000;
+}
+.footer{
     position: absolute;
-    z-index: -99;
+    bottom: 0;
+    width: 100svw;
 }
 
-.header{
-    z-index: 1;
-    font-family: 'Anybody', cursive;
-font-family: 'Inter', sans-serif;
-color: #fff;
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
 }
-#sub-title{
-font-size: 180% ;
-line-height: 50px;
-padding: 5%;
+.socials a{
+    padding: 2%
 }
-
-.statistics{
-color: #fff;
-width: 100%;
-padding: 0 10%;
-text-align: left;
-font-size: 2rem;
+.credits{
+    width: 100svw;
+    text-align: center;
+    padding: 2%;
 }
-
-.left{
-    width: 50%;
-    left: 0;
-    padding-top: 15%;
-}
-
-.right{
-    float: right;
-    width: 50%;
-    padding: 5%;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-    .banner h1{
+@media only screen and (max-width: 800px) {
+    .banner h1 {
         font-size: 100%;
     }
-    .left{
-        width: 50%;
-        left: 0;
-        padding-top: 7rem;
-    }
-    .statistics{
+    .join-info{
         font-size: 1rem;
     }
+    ul{
+        font-size: 2rem;
+    }
+
+    .f {
+        flex-direction: column;
+        max-width: 100%;
+        flex: 0 1 100%;
+    }
+   
+    
 }

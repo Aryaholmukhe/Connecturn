@@ -28,6 +28,17 @@ canvas {
     pointer-events: all;
 }
 
+    #scroll-info{
+        color: #ffffff54;
+        position: absolute;
+        font-size: 200%;
+        z-index: 99;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 100;
+    }
+    
 /* Landing Animation */
 .title,
 .Connect {

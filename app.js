@@ -2,6 +2,7 @@
 const canvas = document.querySelector(".canvas");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+let scrollArrow = document.querySelector("#scroll-info")
 
 const context = canvas.getContext("2d");
 const frameCount = 179;
@@ -54,6 +55,19 @@ canvas.onloadedmetadata = function () {
     0
   );
 };
+
+// var arrow = TweenMax.fromTo("#scroll-info", 3, {y:-50}, {y:40,autoAlpha: 0, repeat:-1});
+
+gsap.to(scrollArrow, {
+  scrollTrigger: {
+    trigger: scrollArrow,
+    scrub: true,
+    start: "bottom 80%",
+    end:"bottom 70%",
+  },
+  opacity: 0,
+});
+
 
 gsap.fromTo(
   ".Connect",
@@ -135,13 +149,11 @@ start: "top center"
 gsap.from(".info", {
   scrollTrigger: {
     trigger: ".info",
-    start: "top 80%",
-    end: "bottom 40%"
+    start: "top center"
   },
-  xPercent: -20,
-  yPercent: 20,
+  xPercent: 20,
   opacity: 0,
-  stagger: 0.5,
+  stagger: 1,
   duration: 1
 });
 

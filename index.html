@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>Connecturn</title>
     <link rel="shortcut icon" href="./iconified/favicon.ico" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/76ae74ba17.js" crossorigin="anonymous"></script>
 <link rel="apple-touch-icon" href="./iconified/apple-touch-icon.png" />
 <link rel="apple-touch-icon" sizes="57x57" href="./iconified/apple-touch-icon-57x57.png" />
 <link rel="apple-touch-icon" sizes="72x72" href="./iconified/apple-touch-icon-72x72.png" />
@@ -20,7 +21,11 @@
 </head>
 
 <body>
-
+    <div id="scroll-info" onscroll="dissapear()">
+        <span class="scroll-text">Scroll</span>
+        <i class="fa fa-angle-double-down scroll-arrow" aria-hidden="true"></i>
+    </div>
+   
     <h1 class="Connect ">Connect</h1>
     <h1 class="title">Connect</h1>
     <h1 class="and title">and</h1>
@@ -43,8 +48,8 @@
         <p class="right">Referred individuals have a 15 times better probability of being hired.
             <span class="emoji">😱</span>
         </p>
-        <p><span class="emoji">😰</span> Additionally, studies have revealed that this contributes to patterns of
-            inequality in the workplace. ‍</p>
+        <p>Additionally, studies have revealed that this contributes to patterns of
+            inequality in the workplace.<span class="emoji">😰</span>  ‍</p>
     </div>
 
     <div id="particles-js"></div>
